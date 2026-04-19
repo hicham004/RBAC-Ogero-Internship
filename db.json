@@ -1,0 +1,227 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "hicham",
+      "email": "hicham.w.saad@gmail.com",
+      "password": "adminpass",
+      "roleId": "admin-role"
+    },
+    {
+      "id": "2",
+      "name": "Alice User",
+      "email": "alice@example.com",
+      "password": "alice123",
+      "roleId": "user-role"
+    },
+    {
+      "id": "3",
+      "name": "Bob User",
+      "email": "bob@example.com",
+      "password": "bob123",
+      "roleId": "user-role"
+    },
+    {
+      "id": "6456",
+      "name": "khalil",
+      "email": "khalil@user.com",
+      "password": "khalil",
+      "roleId": "user-role",
+      "hierarchyId": "2"
+    },
+    {
+      "id": "d0b4",
+      "name": "fawaz",
+      "email": "fawaz@example.com",
+      "password": "fawaz",
+      "roleId": "daf8",
+      "hierarchyId": "cd21"
+    },
+    {
+      "id": "184b",
+      "name": "adam",
+      "email": "adam@example.com",
+      "password": "adam",
+      "roleId": "user-role"
+    },
+    {
+      "id": "b82b",
+      "name": "mostapha",
+      "email": "mostpha@example.com",
+      "password": "mostapha",
+      "roleId": "user-role"
+    },
+    {
+      "id": "fa2f",
+      "name": "toufik",
+      "email": "toufik@example.com",
+      "password": "toufik",
+      "roleId": "user-role",
+      "hierarchyId": "3"
+    },
+    {
+      "id": "1f14",
+      "name": "sara",
+      "email": "sara@eample.com",
+      "password": "sara",
+      "roleId": "admin-role",
+      "hierarchyId": "3"
+    },
+    {
+      "id": "7429",
+      "name": "rania",
+      "email": "rania@example.com",
+      "password": "rania",
+      "roleId": "user-role",
+      "role": {
+        "name": "user",
+        "permissions": [
+          "read",
+          "Edit_profile"
+        ],
+        "id": "user-role"
+      },
+      "hierarchyId": "2906"
+    }
+  ],
+  "roles": [
+    {
+      "id": "admin-role",
+      "name": "admin",
+      "permissions": [
+        "manage_users",
+        "manage_roles",
+        "manage_permissions",
+        "manage_hierarchy"
+      ]
+    },
+    {
+      "name": "user",
+      "permissions": [
+        "read",
+        "Edit_profile"
+      ],
+      "id": "user-role"
+    },
+    {
+      "id": "daf8",
+      "name": "editor",
+      "permissions": [
+        "Edit_messages"
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "id": "1",
+      "name": "manage_users"
+    },
+    {
+      "id": "2",
+      "name": "manage_roles"
+    },
+    {
+      "id": "3",
+      "name": "manage_permissions"
+    },
+    {
+      "id": "4",
+      "name": "manage_hierarchy"
+    }
+  ],
+  "hierarchy": [
+    {
+      "id": "1",
+      "name": "Head Office",
+      "parentId": null
+    },
+    {
+      "id": "2",
+      "name": "Engineering Dept",
+      "parentId": "1"
+    },
+    {
+      "id": "3",
+      "name": "Sales Dept",
+      "parentId": "1"
+    },
+    {
+      "id": "cd21",
+      "name": "Human Resources",
+      "parentId": "1"
+    },
+    {
+      "id": "2906",
+      "name": "Finance Department",
+      "parentId": "1"
+    },
+    {
+      "id": "2897",
+      "name": "Marketing",
+      "parentId": "3"
+    },
+    {
+      "id": "56e4",
+      "name": "Recruitment",
+      "parentId": "cd21"
+    },
+    {
+      "id": "4c14",
+      "name": "Training and Development",
+      "parentId": "cd21"
+    },
+    {
+      "id": "5016",
+      "name": "Materials Engineering",
+      "parentId": "2"
+    },
+    {
+      "id": "ff86",
+      "name": "Mechanical Engineering",
+      "parentId": "2"
+    },
+    {
+      "id": "57ca",
+      "name": "International Office",
+      "parentId": null
+    }
+  ],
+  "changeRequests": [
+    {
+      "id": "1",
+      "userId": "2",
+      "requestedDeptId": "3",
+      "status": "rejected"
+    },
+    {
+      "id": "7489",
+      "userId": "6456",
+      "requestedDeptId": "1",
+      "status": "rejected"
+    },
+    {
+      "id": "7be0",
+      "userId": "6456",
+      "requestedDeptId": "2",
+      "status": "approved"
+    },
+    {
+      "id": "ee2d",
+      "userId": "1f14",
+      "requestedDeptId": "3",
+      "status": "approved"
+    },
+    {
+      "id": "5063",
+      "userId": "7429",
+      "requestedDeptId": "2906",
+      "status": "approved"
+    },
+    {
+      "id": "3b38",
+      "userId": "6456",
+      "requestedDeptId": "1",
+      "status": "pending"
+    }
+  ]
+}
