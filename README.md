@@ -1,12 +1,60 @@
-# React + Vite
+# RBAC Admin Console
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based admin console implementing Role-Based Access Control (RBAC) for user management, built as part of an internship project.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication and authorization
+- Role-based permissions system
+- User management (add, edit, view users)
+- Role and permission management
+- Hierarchical department structure
+- Request management system
+- Protected routes based on permissions
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- React Router DOM
+- JSON Server (for mock backend)
+- ESLint
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/hicham004/RBAC-Ogero-Internship.git
+   cd RBAC-Ogero-Internship
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+## Usage
+
+1. Start the JSON Server (mock backend):
+   ```
+   npx json-server --watch db.json --port 8080
+   ```
+
+2. In a new terminal, start the development server:
+   ```
+   npm run dev
+   ```
+
+3. Open your browser and navigate to `http://localhost:5173`
+
+## Default Credentials
+
+- Admin: hicham.w.saad@gmail.com / adminpass
+- User: alice@example.com / alice123
+
+## Project Structure
+
+- `src/components/` - Reusable UI components
+- `src/context/` - React context for authentication
+- `src/pages/` - Page components for different views
+- `db.json` - Mock database for JSON Server
